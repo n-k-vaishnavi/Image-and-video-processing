@@ -1,0 +1,10 @@
+from PIL import Image
+my_bias = Image.open("joshua_hong.jpg")
+my_bias.show()
+my_bias.save("joshua_hong_copy.jpg")
+joshua_small = my_bias.resize((my_bias.width//2,my_bias.height//2))
+joshua_small.save("joshua_small.jpg")
+joshua_rotated = my_bias.rotate(90)
+joshua_rotated.save("joshua_rotated.jpg")
+joshua_cropped = my_bias.crop((50,50,150,150))
+joshua_cropped.save("joshua_cropped.jpg")

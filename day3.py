@@ -1,0 +1,10 @@
+from PIL import Image
+img = Image.open("cat.jpg")
+img.show()
+img.save("cat_copy.jpg")
+small_img = img.resize((img.width//2, img.height//2))
+small_img.save("cat_small.jpg")
+rotated = img.rotate(45)
+rotated.save("cat_rotated.jpg")
+cropped = img.crop((50,50,300,300))
+cropped.save("cat_cropped.jpg")
